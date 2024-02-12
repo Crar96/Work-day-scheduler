@@ -20,8 +20,21 @@ if (dayjs().hour() === i) {
   textArea.addClass("future");
 }
 
+let storedEvent = localStorage.getItem("event" + i);
+if (storedEvent) {
+  textArea.val(storedEvent);
+}
 
+let saveBtn = $("<button>").addClass("col-md-1 saveBtn").html('<i class="fas fa-save"></i>');
 
 });
 
+// Append timeblock and elements
+
 timeBlock.append(column, textBox,);
+
+$(".container").append(timeBlock);
+
+
+
+
