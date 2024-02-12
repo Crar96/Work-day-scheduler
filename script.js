@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 // Time blocks 
-  for (let i = 9.00; i <= 17.00; i++) {
+  for (let i = 9; i <= 22; i++) {
     let timeBlock = $("<div>").addClass("row time-block");
     let column = $("<div>").addClass("col-md-1 hour").text(dayjs().hour(i).format("hA"));
     let textArea = $("<textArea>").addClass("col-md-10 description");
@@ -30,6 +30,7 @@ $(document).ready(function() {
     let eventText = textArea.val();
     localStorage.setItem("event" + i, eventText);
   });
+
 
 // Append timeblock and elements
 
